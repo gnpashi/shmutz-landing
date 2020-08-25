@@ -46,7 +46,7 @@ a{
 	flex-direction: row;
 }
 .mx{
-	margin: 0vw 5vw 0 5vw;
+	margin: 5vw 5vw 0 5vw;
 }
 #hashtag{
 	background: white;
@@ -79,11 +79,26 @@ align-items: center;
 	letter-spacing: 15px;
 	height: 100%;
 	}
-.hashtag { grid-area: 3 / 1 / 5 / 3;
+
+.headers {
+	grid-area: 4 / 1 / 5 / 3 ;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 2fr 1fr 1fr;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	width: 100%
+}
+
+	.hashtag { grid-area: 1 / 1 / 2 / 3; }
+	.register { grid-area: 2 / 1 / 4 / 2; }
+	.to-site{ grid-area: 2 / 2 / 3 / 3; }
+	.whatsapp { grid-area: 3 / 2 / 4 / 3; }
+/* .hashtag { grid-area: 3 / 1 / 5 / 3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 90%;
+	height: 100%;
 	font-size: 10vw;
 	}
 .register { grid-area: 5 / 1 / 7 / 2;
@@ -93,13 +108,16 @@ align-items: center;
 	height: 100%}
 .whatsapp { grid-area: 6 / 2 / 7 / 2;
  	height: 100%
-}
-.details { grid-area: 7 / 1 / 8 / 3;
-	/* font-size: 6vw; */
+} */
+.details { grid-area: 5 / 1 / 6 / 3;
+	font-size: 8vw;
 	height: 100%;
 	line-height: 0.8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
  }
-.form { grid-area: 8 / 1 / 12 / 3;
+.form { grid-area: 8 / 1 / 10 / 3;
  	background: var(--dark-blue);
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -109,6 +127,7 @@ align-items: center;
 	font-size: 1rem;
 	text-align: right;
 	padding: 1rem 0 1rem 0;
+	border-radius: 5px;
 }
 .form div{
 	display: flex;
@@ -119,6 +138,9 @@ align-items: center;
 div input{
 	align-self: center;
 	width: 90%;
+	height: 2rem;
+	border-radius: 5px;
+	border: 0;
 }
 div label{
 	margin-right: 1rem;
