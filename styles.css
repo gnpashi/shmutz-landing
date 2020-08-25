@@ -1,8 +1,25 @@
-@font-face {
+/* @font-face {
   font-family: "abraham";
-  src: url("./fonts/Abraham-Light.otf"),
-  src: url("./fonts/Abraham-Regular.otf");
+} */
+
+@font-face {
+    font-family: "abraham";
+		/* src: url("./fonts/Abraham-Light.otf"),
+				 url("./fonts/Abraham-Regular.otf"); */
+    src: url('./fonts/abraham-regular.eot');
+		src: url('./fonts/abraham-light.eot');
+    src: url('./fonts/abraham-regular.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/abraham-regular.woff2') format('woff2'),
+         url('./fonts/abraham-regular.woff') format('woff'),
+         url('./fonts/abraham-regular.svg#abrahamregular') format('svg'),
+				 url('./fonts/abraham-light.eot?#iefix') format('embedded-opentype'),
+ 				 url('./fonts/abraham-light.woff2') format('woff2'),
+ 				 url('./fonts/abraham-light.woff') format('woff'),
+ 				 url('./fonts/abraham-light.svg#abrahamlight') format('svg');
+		src: url("./fonts/Abraham-Light.otf"),
+ 				 url("./fonts/Abraham-Regular.otf");
 }
+
 :root{
 	--light-blue: #4EB3BB;
 	--mid-blue: #277b9f;
