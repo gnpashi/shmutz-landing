@@ -1,7 +1,7 @@
 @font-face {
   font-family: "abraham";
-  src: url("fonts/Abraham-Light.otf"),
-  src: url("fonts/Abraham-Regular.otf");
+  src: url("../fonts/Abraham-Light.otf"),
+  src: url("../fonts/Abraham-Regular.otf");
 }
 :root{
 	--light-blue: #4EB3BB;
