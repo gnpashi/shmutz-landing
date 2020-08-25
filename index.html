@@ -2,26 +2,76 @@
 <html lang="he" dir="rtl">
 	<head>
 		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css"  href="styles.css">
+		<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 		<title>פותחים שנה בשומר הצעיר!</title>
 	</head>
 	<body>
-		<div class="content">
-			<div id="logo">
-
+		<div class="parent mx">
+			<div class="logo-div flex flex-row">
+				<img id="logo" src="logo.png" alt="logo">
+				<div id="logo-text">
+					השומר הצעיר
+				</div>
 			</div>
-			<div id="hashtag">
-
-			</div>
-			<div id="buttons">
-				<div id="register">
+			<div class="hashtag bg-white text-blue">#זהמהשבטוח</div>
+			<a class="register">להרשמה ותשלום</a>
+			<a class="to-site">לאתר התנועה</a>
+			<a class="whatsapp">שלחו לנו הודעה</a>
+			<div class="details">רוצה לשמוע פרטים נוספים?</div>
+			<form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSeqSgPOKCxJD33GFUumDMWX7qhmkrT6QEAVrCUM2R_FvFn-QQ/formResponse" method="POST"
+			target="hidden_iframe" onsubmit="submitted=true;">
+				<div class="name">
+					<label>שם*</label>
+					<input type="text" name="entry.2005620554" required>
+				</div>
+				<div class="city">
+					<label>יישוב*</label>
+					<input type="text" name="" required>
+				</div>
+				<div class="phone">
+					<label>טלפון</label>
+					<input type="number" name="entry.1166974658">
+				</div>
+				<div class="email">
+					<label>מייל*</label>
+					<input type="email" name="entry.1045781291" required>
+				</div>
+				<div class="region">
+					<label>אזור בארץ*</label>
+					<input type="text" name="" required>
+				</div>
+				<div class="send">
+					<button type="submit">שליחה</button>
 
 				</div>
-				<div id="to-site">
+			</form>
+		</div>
+		<!-- <div class="flex flex-col mx" id="content">
 
+			<div class="flex flex-row" id="logo-div">
+			</div>
+
+			<div id="hashtag">
+				#זהמהשבטוח
+			</div>
+
+			<div class="flex flex-row" id="buttons">
+				<a href="#" class="button">
+					להרשמה ותשלום
+				</a>
+				<div class="flex flex-col">
+					<a class="button" href="#">
+						לאתר התנועה
+					</a>
+					<a class="button" href="#">
+						שלחו לנו הודעה
+					</a>
 				</div>
 			</div>
 			<div id="more-details">
+				רוצה לשמוע פרטים נוספים?
 			</div>
 			<div id="form-div">
 				<form action="https://docs.google.com/forms/d/e/1FAIpQLSeqSgPOKCxJD33GFUumDMWX7qhmkrT6QEAVrCUM2R_FvFn-QQ/formResponse" method="POST"
@@ -56,7 +106,7 @@
 
 		</script>
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-		onload="if(submitted) {form.innerHTML = 'thanks'}"></iframe>
+		onload="if(submitted) {form.innerHTML = 'thanks'}"></iframe> -->
 
 	</body>
 </html>
