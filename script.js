@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $('#select_city').select2();
+  $('#select_city').select2({
+		 placeholder: 'בחרו ישוב'
+	});
 	let optionList = document.getElementById('select_city').options;
 	let options = [{text: "בחרו ישוב", value: "", region:""}];
 	let regions = ["g"]
