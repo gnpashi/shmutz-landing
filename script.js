@@ -16,12 +16,12 @@ $(document).ready(function() {
 				 options.push(opt)
 				 console.log(opt);
 			 	// console.log(data.result.records[i]["שם_ישוב"])
-				options.forEach(option =>
-					optionList.add(
-						new Option(option.text, option.value, option.selected)
-					)
-				);
 			 }
+			 options.forEach(option =>
+				 optionList.add(
+					 new Option(option.text, option.value, option.selected)
+				 )
+			 );
 
 			 // alert('Total results found: ' + data.result.total)
 		 }
