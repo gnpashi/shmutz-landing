@@ -265,3 +265,8 @@ div label{
 	height: calc(4 * var(--vh)) !important;
 	font-size: 3vw;
 }
+@media screen and (min-width: 992px) {
+  .parent {
+    background-color: blue;
+  }
+}
