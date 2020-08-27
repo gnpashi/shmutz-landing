@@ -44,4 +44,11 @@ $(document).ready(function() {
     doc.style.setProperty('--vh', `${precentHeight}px`)
 	 }
 	setViewport()
+	$( window ).resize(function() {
+		$('#select_city').select2({});
+
+		// console.log("re");
+		// var width = $("form").width()/10
+  	// $( ".select2-selection" ).width(width*9.5)
+	});
 });
