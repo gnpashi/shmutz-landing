@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	let optionList = document.getElementById('select_city').options;
-	let options = [];
+	let options = [{text: "בחרו ישוב", value: ""}];
 	var data = {
 		 resource_id: '5c78e9fa-c2e2-4771-93ff-7f400a12f7ba', // the resource id
 		 // limit: 5, // get 5 results
@@ -19,13 +19,9 @@ $(document).ready(function() {
 			 }
 			 options.forEach(option =>
 				 optionList.add(
-					 new Option(option.text, option.value, option.selected)
+					 new Option(option.text, option.value)
 				 )
 			 );
-
-			 // alert('Total results found: ' + data.result.total)
 		 }
 	 });
-
-
 });
