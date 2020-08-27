@@ -2,10 +2,17 @@
 <html lang="he" dir="rtl">
 	<head>
 		<meta charset="utf-8">
-		  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:title" content="השומר הצעיר" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://gnpashi.github.io/shmutz-landing/" />
+		<meta property="og:image" content="./favicon.webp" />
+		<link rel="icon" type="image/webp" href="./favicon.webp">
 		<link rel="stylesheet" type="text/css"  href="styles.css">
 		<script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 		<title>פותחים שנה בשומר הצעיר!</title>
 	</head>
 	<body>
@@ -15,9 +22,9 @@
 			</div>
 			<div class="headers">
 				<div class="hashtag bg-white text-blue">#זהמהשבטוח</div>
-				<a class="register">להרשמה ותשלום</a>
-				<a class="to-site">לאתר התנועה</a>
-				<a class="whatsapp">שלחו לנו הודעה</a>
+				<a href="https://hashomer-hatzair.com/" class="register">להרשמה ותשלום</a>
+				<a href="https://hashomer-hatzair.org/" class="to-site">לאתר התנועה</a>
+				<a href="https://wa.me/972524840640" class="whatsapp">שלחו לנו הודעה</a>
 
 			</div>
 			<div class="details">רוצה לשמוע פרטים נוספים?</div>
@@ -33,12 +40,13 @@
 				</div>
 				<div class="city">
 					<label>יישוב*</label>
-					<select id="select_city" class="" name=""></select>
+					<select id="select_city" class="" name="entry.839337160"></select>
 				</div>
 				<div class="email">
 					<label>מייל*</label>
 					<input type="email" name="entry.1045781291" required>
 				</div>
+				<input id="region" type="hidden" name="entry.1022618964" value="" >
 				<div class="send">
 					<button type="submit">שליחה</button>
 
