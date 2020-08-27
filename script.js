@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#select_city').select2({});
 	let optionList = document.getElementById('select_city').options;
 	let options = [{text: "בחרו ישוב", value: "", region:""}];
-	let regions = ["g"]
+	let regions = []
 	var data = {
 		 resource_id: '5c78e9fa-c2e2-4771-93ff-7f400a12f7ba', // the resource id
 		 limit: 1273, // get 5 results
@@ -27,7 +27,10 @@ $(document).ready(function() {
 					 new Option(option.text, option.value)
 				 )
 			 );
-			 // console.log(regions);
+			 var filtered = regions.filter(function(el) { return el; });
+
+			 console.log(filtered);
+			 console.log(regions);
 			 // console.log(options[2]);
 			 // console.log(region);
 			 $("#select_city").change(function(event) {
@@ -45,7 +48,7 @@ $(document).ready(function() {
 	 }
 	setViewport()
 	$( window ).resize(function() {
-		$('#select_city').select2({});
+		// $('#select_city').select2({});
 
 		// console.log("re");
 		// var width = $("form").width()/10
