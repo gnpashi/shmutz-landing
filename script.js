@@ -1,9 +1,10 @@
 $(document).ready(function() {
 	let optionList = document.getElementById('select_city').options;
 	let options = [{text: "בחרו ישוב", value: ""}];
+	var count = 0
 	var data = {
 		 resource_id: '5c78e9fa-c2e2-4771-93ff-7f400a12f7ba', // the resource id
-		 // limit: 5, // get 5 results
+		 limit: 1273, // get 5 results
 		 // q: 'עין' // query for 'jones'
 	 };
 	 $.ajax({
@@ -14,9 +15,11 @@ $(document).ready(function() {
 			 for (var i = 0; i < data.result.records.length; i++) {
 				 var opt = {text: data.result.records[i]["שם_ישוב"].trim(), value: data.result.records[i]["שם_ישוב"].trim()}
 				 options.push(opt)
-				 console.log(opt);
+				 // console.log(opt);
+				 count++
 			 	// console.log(data.result.records[i]["שם_ישוב"])
 			 }
+			 console.log(count);
 			 options.forEach(option =>
 				 optionList.add(
 					 new Option(option.text, option.value)
