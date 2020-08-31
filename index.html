@@ -28,30 +28,40 @@
 
 			</div>
 			<div class="details">רוצה לשמוע פרטים נוספים?</div>
-			<form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSeqSgPOKCxJD33GFUumDMWX7qhmkrT6QEAVrCUM2R_FvFn-QQ/formResponse" method="POST"
+			<form class="forma" action="https://docs.google.com/forms/d/e/1FAIpQLSeqSgPOKCxJD33GFUumDMWX7qhmkrT6QEAVrCUM2R_FvFn-QQ/formResponse" method="POST"
 			target="hidden_iframe" onsubmit="submitted=true;">
-				<div class="name">
-					<label>שם*</label>
-					<input type="text" name="entry.2005620554" required>
+				<div class="thanks">
+					תודה רבה!
+					ניצור איתך קשר בקרוב!
 				</div>
-				<div class="phone">
-					<label>טלפון</label>
-					<input type="number" name="entry.1166974658">
+				<div id="loading">
+					<img src="loading.gif" alt="Loading" />
 				</div>
-				<div class="city">
-					<label>יישוב*</label>
-					<select id="select_city" class="" name="entry.839337160"></select>
-				</div>
-				<div class="email">
-					<label>מייל*</label>
-					<input type="email" name="entry.1045781291" required>
-				</div>
-				<input id="region" type="hidden" name="entry.1022618964" value="" >
-				<div class="send">
-					<div class="safety">
-						*אנו פועלים על פי הנחיות הממשלה בכל עת ולפי כללי הבטיחות הנדרשים
+				<div class="form">
+
+					<div class="name">
+						<label>שם*</label>
+						<input type="text" name="entry.2005620554" required>
 					</div>
-					<button type="submit">שליחה</button>
+					<div class="phone">
+						<label>טלפון</label>
+						<input type="number" name="entry.1166974658">
+					</div>
+					<div class="city">
+						<label>יישוב*</label>
+						<select id="select_city" class="" name="entry.839337160"></select>
+					</div>
+					<div class="email">
+						<label>מייל*</label>
+						<input type="email" name="entry.1045781291" required>
+					</div>
+					<input id="region" type="hidden" name="entry.1022618964" value="" >
+					<div class="send">
+						<div class="safety">
+							*אנו פועלים על פי הנחיות הממשלה בכל עת ולפי כללי הבטיחות הנדרשים
+						</div>
+						<button id="submit" type="submit">שליחה</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -61,12 +71,22 @@
 			<div class="bar"></div>
 		</div>
 		<script type="text/javascript">
-			var submitted=false;
-			var form = document.querySelector("#form-div")
-
+			var submitted = false
+			var form = document.querySelector("form")
+			// console.log(form.innerHTML);
+			// form.innerHTML = 'thanks'
+			var thanks = document.querySelector(".thanks")
+			$("#submit").click(function(event) {
+				$('.form').hide()
+			$('#loading').show()
+			});
 		</script>
-		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-		onload="if(submitted) {form.innerHTML = 'thanks'}"></iframe>
 		<script src="script.js" charset="utf-8"></script>
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+		onload="if(submitted) {
+			$('.form').hide()
+			$('#loading').hide()
+			$('.thanks').show()
+		}"></iframe>
 	</body>
 </html>
