@@ -29,8 +29,8 @@ $(document).ready(function() {
 			 );
 			 var filtered = regions.filter(function(el) { return el; });
 
-			 console.log(filtered);
-			 console.log(regions);
+			 // console.log(filtered);
+			 // console.log(regions);
 			 // console.log(options[2]);
 			 // console.log(region);
 			 $("#select_city").change(function(event) {
@@ -53,5 +53,9 @@ $(document).ready(function() {
 		// console.log("re");
 		// var width = $("form").width()/10
   	// $( ".select2-selection" ).width(width*9.5)
+    // console.log(window.outerHeight);
 	});
+  if (window.outerHeight) {
+
+  }
 });
