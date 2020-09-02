@@ -330,7 +330,7 @@ label{
 #loading{
   display: none
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 	html,body{
 		height: 100vh;
 		min-height: 100vh;
