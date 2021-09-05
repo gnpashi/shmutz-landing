@@ -1,0 +1,105 @@
+$body-background: #76ddea;
+$body-color: #fff;
+@import "https://abraham-api.netlify.app/weights/regular_bold.css";
+body {
+	background: rgb(118, 221, 234);
+	background: linear-gradient(
+		135deg,
+		rgba(118, 221, 234, 1) 0%,
+		rgba(8, 148, 216, 1) 100%
+	);
+	min-height: 100vh;
+	color: $body-color;
+	font-family: "Abraham", sans-serif;
+	margin: 0;
+	overflow: hidden;
+	main {
+		overflow: hidden;
+		padding: 5%;
+		display: grid;
+		a {
+			text-decoration: none;
+			border-bottom: 3px solid #3d58a7;
+			border-radius: 5px;
+			padding: 1rem;
+			font-size: 1.5rem;
+			text-align: center;
+			white-space: pre-line;
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: 2px;
+		}
+		header {
+			display: flex;
+			gap: 1rem;
+			.logo {
+				width: 100%;
+			}
+		}
+		.btns {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			padding: 1rem 0;
+			padding-top: 2rem;
+			// justify-content: center;
+			// align-items: center;
+			gap: 1rem;
+			.btn {
+				color: #3d58a7;
+				background: white;
+			}
+		}
+		.subtitle {
+			text-align: center;
+			// padding: 1rem 0;
+			margin: 0;
+			display: inline;
+			// width: 100%;
+			// font-size: 3rem;
+			// font-size: 100%;
+		}
+		.infos {
+			display: flex;
+			.info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				&-img {
+					width: 50px;
+				}
+				&-text {
+					text-align: center;
+				}
+			}
+		}
+
+		.more-info {
+			color: white;
+			background: #06d755;
+			// width: 100%;
+			display: block;
+			position: relative;
+			.whatsapp {
+				// display: none;
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				height: 60%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+// h1,
+// nav,
+// footer {
+// 	text-align: center;
+// }
+
+// main {
+// 	margin: 4rem auto;
+// 	max-width: 60rem;
+// }
