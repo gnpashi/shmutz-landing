@@ -132,6 +132,10 @@ body {
 			}
 			&__mobile {
 				display: block;
+				&.mobile-fixed {
+					position: fixed;
+					bottom: 0;
+				}
 			}
 			&__desktop {
 				display: none;

@@ -10,3 +10,14 @@ fitty('.subtitle', {
     minSize: 30,
     maxSize: 300,
 });
+
+window.onload = (event) => {
+    const img = document.querySelector(".img__mobile")
+    const imgDisplay = window.getComputedStyle(img).display
+    const main = document.querySelector("main")
+    const mainHeight = parseInt(window.getComputedStyle(main).height)
+    if (imgDisplay == "block" && mainHeight <= window.innerHeight) {
+        console.log("higher");
+        img.classList.add("mobile-fixed")
+    }
+  };
