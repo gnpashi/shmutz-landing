@@ -6,6 +6,9 @@ $body-color: #fff;
 		@content;
 	}
 }
+:root {
+	--animation-duration: 300ms;
+}
 body {
 	background: rgb(118, 221, 234);
 	background: linear-gradient(
@@ -50,6 +53,7 @@ body {
 		header {
 			display: flex;
 			gap: 1rem;
+			animation: topDown var(--animation-duration) ease-in 1 forwards;
 			.logo {
 				width: 100%;
 			}
@@ -63,6 +67,8 @@ body {
 			// justify-content: center;
 			// align-items: center;
 			gap: 1rem;
+			animation: topDown var(--animation-duration) var(--animation-duration)
+				ease-in 1 forwards;
 			.btn {
 				color: #3d58a7;
 				background: white;
@@ -75,9 +81,13 @@ body {
 			text-align: center;
 			margin: 0;
 			display: inline;
+			animation: topDown var(--animation-duration)
+				calc(var(--animation-duration) * 1.5) ease-in 1 forwards;
 		}
 		.infos {
 			display: flex;
+			animation: topDown var(--animation-duration)
+				calc(var(--animation-duration) * 2) ease-in 1 forwards;
 			.info {
 				display: flex;
 				flex-direction: column;
@@ -101,19 +111,22 @@ body {
 		}
 
 		.more-info {
-			color: white;
-			background: #06d755;
-			// width: 100%;
-			display: block;
-			position: relative;
-			font-size: 2rem;
-			.whatsapp {
-				// display: none;
-				position: absolute;
-				top: 50%;
-				right: 10px;
-				height: 60%;
-				transform: translateY(-50%);
+			animation: topDown var(--animation-duration)
+				calc(var(--animation-duration) * 2.5) ease-in 1 forwards;
+			&__btn {
+				color: white;
+				background: #06d755;
+				display: block;
+				position: relative;
+				font-size: 2rem;
+				.whatsapp {
+					// display: none;
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					height: 60%;
+					transform: translateY(-50%);
+				}
 			}
 		}
 		.img {
@@ -172,13 +185,22 @@ body {
 	}
 }
 
-// h1,
-// nav,
-// footer {
-// 	text-align: center;
-// }
+.animation-start {
+	opacity: 0;
+	transform: translateY(-50px);
+}
 
-// main {
-// 	margin: 4rem auto;
-// 	max-width: 60rem;
-// }
+@keyframes topDown {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+a {
+	transition: transform 200ms;
+}
+a:hover,
+a:focus {
+	transform: translateY(-10px);
+}
