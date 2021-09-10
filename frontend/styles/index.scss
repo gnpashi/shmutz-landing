@@ -117,6 +117,7 @@ body {
 			}
 		}
 		.img {
+			z-index: -1;
 			@include desktop() {
 				position: relative;
 				--right-margin: 30vw;
