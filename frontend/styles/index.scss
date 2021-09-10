@@ -131,6 +131,7 @@ body {
 		}
 		.img {
 			z-index: -1;
+
 			@include desktop() {
 				position: relative;
 				--right-margin: 30vw;
@@ -140,7 +141,6 @@ body {
 			&__mobile,
 			&__desktop {
 				max-width: 100%;
-
 				bottom: 0;
 				inset-inline: 0;
 			}
