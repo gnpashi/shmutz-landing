@@ -17,7 +17,9 @@ body {
 	color: $body-color;
 	font-family: "Abraham", sans-serif;
 	margin: 0;
-	overflow: hidden;
+	@include desktop() {
+		overflow: hidden;
+	}
 
 	main {
 		// overflow: hidden;
