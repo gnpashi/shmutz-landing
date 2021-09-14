@@ -72,6 +72,9 @@ body {
 			.btn {
 				color: #3d58a7;
 				background: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				@include desktop() {
 					font-size: 2rem;
 				}
