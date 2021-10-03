@@ -12,6 +12,7 @@ fitty('.subtitle', {
 });
 
 window.onload = (event) => {
+    window.scrollTo(0, 0);
     const img = document.querySelector(".img__mobile")
     const imgDisplay = window.getComputedStyle(img).display
     const main = document.querySelector("main")
